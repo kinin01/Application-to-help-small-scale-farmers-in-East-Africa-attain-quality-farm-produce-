@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %} Kirinyaga Farmers {% endblock %}
+
+{% block body %}
+<h1>Crops We Grow</h1>
+<div class="jumbotron jumbotron-center">
+{% for procedure in procedures %}
+    <h3><li class="list-group-item"> <a class="btn btn-primary my-1" href="crops/{{procedure.id}}">
+        {{procedure.maintitle}}</a></h3>
+    </li>
+ 
+{% endfor %}
+</div>  
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Dashboard <br><small> Welcome {{user.firstname}}</small></h1>
+
+<a class="btn btn-success" href="/schedule">Schedule Procedures</a>
+<hr>
+<table class="table table-striped">
+  <ul class="list-group">
+     <h2><br><small> hey!{{user.secondname}}</small></h2>
+
+  </ul>
+{% endblock %}

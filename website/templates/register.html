@@ -1,0 +1,113 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+{% if user.is_authenticated == 0 %}
+     <form method="POST">
+  <h3 align="center">Register</h3>
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input
+      type="firstname"
+      class="form-control"
+      id="firstname"
+      name="firstname"
+      placeholder="Enter firstname"
+    />
+  </div>
+  <div class="form-group">
+    <label for="secondname">Second Name</label>
+    <input
+      type="secondname"
+      class="form-control"
+      id="secondname"
+      name="secondname"
+      placeholder="Enter secondname"
+    />
+  </div>
+  <div class="form-group">
+    <label for="idn">Identication Number</label>
+    <input
+      type="idn"
+      class="form-control"
+      id="idn"
+      name="idn"
+      placeholder="Enter idn"
+    />
+  </div>
+  <div class="form-group">
+    <label for="phonenumber">Phone Number</label>
+    <input
+      type="phonenumber"
+      class="form-control"
+      id="phonenumber"
+      name="phonenumber"
+      placeholder="Enter phonenumber"
+    />
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+      <div class="form-group">
+        <label for="country">Country
+        </label> 
+        <input
+          type="country"
+          class="form-control"
+          id="country"
+          name="country"
+          placeholder="Enter country"
+        />
+      </select>
+      </div>
+      <div class="form-group">
+        <label for="village">Village</label>
+        <input
+          type="village"
+          class="form-control"
+          id="village"
+          name="village"
+          placeholder="Enter Village"
+        />
+      </div>
+      <div class="form-group">
+        <label for="sizeofland">Land Size</label>
+        <input
+          type="sizeofland"
+          class="form-control"
+          id="sizeofland"
+          name="sizeofland"
+          placeholder="Enter Size Of Land"
+        />
+      </div>
+       <div class="form-group">
+    <label for="password1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password1"
+      name="password1"
+      placeholder="Enter password"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password2">Password (Confirm)</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password2"
+      name="password2"
+      placeholder="Confirm password"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Next</button>
+</form>   
+{% endif %}
+
+{% endblock %}

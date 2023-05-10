@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block title %} Kirinyaga Farmers{% endblock %}
+
+{% block body %}
+<div class="container">
+<b><h2>{{procedure.maintitle}}</h2></b>
+</div>
+<div class="jumbotron jumbotron-center">
+<h2>Hellow {{session.name}} these are weekly procedures</h2>
+    {% for week in procedure.weeks %}
+        <p>Week: {{week.id}}</p>
+        <p>{{week.title}}</p>
+        <ul>
+            {% for activity in week.activities %}
+            <li class="list-group-item">
+                {{activity.activity}}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>     
+{% endblock %}
